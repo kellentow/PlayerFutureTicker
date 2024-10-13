@@ -18,8 +18,11 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v3
       with:
-        java-version: '17'  # Adjust the Java version as needed
+        java-version: '21'  # Ensure JDK 21 is set
         distribution: 'adopt'
+
+    - name: Check Java version
+      run: java -version  # Confirm the Java version
 
     - name: Build project
       run: mvn clean package  # This builds the Maven project
