@@ -1,0 +1,18 @@
+# Simulation Plugin Configuration
+
+# The radius of chunks to keep loaded around the player when they log off.
+# This defines a grid of chunks centered on the player's position.
+# Example: A chunk-radius of 3 will load a 7x7 grid of chunks around the player.
+chunk-radius: 3
+
+# The maximum number of players who can have active ticking zones simultaneously.
+# Once this limit is reached, new players logging off will not have their areas simulated
+# until space is available.
+max-ticking-zones: 5
+
+# Settings for how mob ticking and redstone ticking are handled
+mob-ticking:
+  enabled: true  # Set to false if you want to disable mob ticking in the simulated zones
+
+redstone-ticking:
+  enabled: true  # Set to false if you want to disable redstone ticking in the simulated zones

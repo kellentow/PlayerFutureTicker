@@ -1,0 +1,16 @@
+name: PlayerFutureTicker
+main: com.example.playerfutureticker.PlayerFutureTicker
+version: 1.0
+api-version: 1.19  # Make sure this matches your server version
+description: A plugin to simulate chunks when players log off
+author: YourName
+commands:
+  mycommand:
+    description: My command description
+    usage: /mycommand <arg1> <arg2>
+
+permissions:
+  PlayerFutureTicker.mycommand:
+    description: Allows the player to use mycommand
+    default: true
+
