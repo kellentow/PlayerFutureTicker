@@ -5,7 +5,7 @@ on:
     branches:
       - main
     tags:
-      - 'v*'  # Optionally trigger for tags like v1.0.0
+      - 'v*'  # Trigger on version tags
 
 jobs:
   release:
@@ -39,3 +39,11 @@ jobs:
         prerelease: false
         body: |
           Automated release for version ${{ github.ref_name }}.
+
+    - name: Upload build artifact (optional)
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: target/your_project.jar  # Adjust to your artifact
+        asset_name: your_project.jar  # Adjust the name of the artifact
+        asset_content_type: application/java-archive
